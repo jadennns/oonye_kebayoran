@@ -60,7 +60,7 @@ function MenuItem({
   };
 }) {
   return (
-    <div className="border-2 trans-grow border-gray-600 rounded-md p-4 w-[22rem] lg:w-[25rem] h-[10rem]">
+    <div className="border-2 trans-grow border-gray-600 rounded-md p-4 w-[20rem] lg:w-[25rem] h-[12rem] lg:h-[10rem]">
       <div className="flex items-start space-x-4">
         <img
           src={item.img}

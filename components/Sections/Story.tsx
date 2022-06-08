@@ -1,8 +1,22 @@
+import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 export default function Story() {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const [width, setWidth] = useState<number>(1);
 
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    setWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
   return isMobile ? (
     <section id="about" className="w-screen bg-primary-2 h-[30rem]">
       <div className="flex flex-col justify-center mt-20 items-center space-x-10 slide-in">

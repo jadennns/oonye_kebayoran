@@ -1,9 +1,24 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { useMediaQuery } from "react-responsive";
 
 export default function MainSection() {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const [width, setWidth] = useState<number>(1);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    setWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
 
   return isMobile ? (
     <div className="flex flex-col items-center space-x-20 slide-in">
