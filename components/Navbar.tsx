@@ -1,7 +1,9 @@
+import e from "express";
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsList } from "react-icons/bs";
+import { IoSend } from "react-icons/io5";
 
 export default function Navbar() {
   const [search, setSearch] = useState("Pisang Goreng");
@@ -33,13 +35,29 @@ export default function Navbar() {
               <BsList size={25} />
             </div>
             {openHamburger && (
-              <div className="bg-primary-3 lg:hidden rounded-md px-2 py-2 flex flex-col space-y-2 z-50 absolute left-auto right-0 w-32 animate-growdown">
+              <div className="bg-primary-3 lg:hidden rounded-md px-2 py-2 flex flex-col space-y-2 z-50 absolute left-auto right-0 w-[17rem] animate-growdown">
                 <a href="#about" className="text-white text-base pl-2">
                   About
                 </a>
                 <Link href={"/menu"}>
                   <a className="text-white text-base pl-2">Menu</a>
                 </Link>
+                <div className="pl-2 flex items-center space-x-2">
+                  <input
+                    type="text"
+                    className="outline-none px-1 py-1 w-52 text-base"
+                    placeholder="Search your menu item here"
+                    onChange={(e) => setSearch(e.target.value)}
+                  />
+                  <IoSend
+                    className="text-white"
+                    size={20}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      location.replace("/menu?q=" + search);
+                    }}
+                  />
+                </div>
               </div>
             )}
           </div>
