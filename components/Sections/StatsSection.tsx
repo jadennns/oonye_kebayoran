@@ -6,7 +6,7 @@ export default function StatsSection() {
       <div className="flex items-center space-x-2 slide-in">
         <div className="flex flex-col items-center space-y-1 text-primary-3">
           <p className="font-semibold flex items-end space-x-1">
-            <span className="text-5xl">4.9</span>
+            <span className="text-5xl">4.3</span>
             <AiFillStar size={25} />
           </p>
           <p className="text-lg">Google score</p>

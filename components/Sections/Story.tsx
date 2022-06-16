@@ -28,12 +28,7 @@ export default function Story() {
         />
         <div className="flex flex-col items-center space-y-2">
           <h1 className="text-primary-3 font-bold text-4xl">Our story</h1>
-          <p className="text-gray-900 text-lg w-[20rem] lg:w-[30rem]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            eum fugit officia animi, ad voluptatem quas suscipit. Fugit ut
-            dignissimos veritatis quia in recusandae quidem molestias sunt,
-            voluptatibus numquam ullam.
-          </p>
+          <p className="text-gray-900 text-lg w-[20rem] lg:w-[30rem]"></p>
         </div>
       </div>
     </section>

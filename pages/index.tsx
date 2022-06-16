@@ -26,10 +26,11 @@ function Children() {
       <MainSection />
       <div className="flex flex-col items-center space-y-10">
         <StatsSection />
-        <Story />
-        <div className="hidden lg:flex">
-          <Location />
-        </div>
+        {/* <Story /> */}
+        <br />
+        <br />
+        <br />
+        <Location />
         <br />
         <br />
         <br />

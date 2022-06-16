@@ -91,11 +91,8 @@ function Header1() {
       <h1 className="text-primary-3 font-bold text-2xl lg:text-5xl">
         Oonye Kebayoran
       </h1>
-      <p className="text-gray-600 w-[20rem] lg:w-[40rem] text-lg">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-        neque autem ratione, consequuntur quae deserunt voluptatibus odio labore
-        nostrum adipisci minus voluptas odit ipsa similique nam! Illo mollitia
-        provident laborum.
+      <p className="text-gray-700 w-[20rem] lg:w-[40rem] text-lg">
+        Pisang Goreng Kriuk & Es Kopi
       </p>
     </div>
   );
